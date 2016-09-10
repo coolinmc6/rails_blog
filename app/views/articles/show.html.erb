@@ -1,8 +1,8 @@
 <!-- show.html.erb -->
 
 <p>
-  <strong>Title:</strong>
-  <%= @article.title %>
+  <strong>Title: </strong><%= @article.title %>
+  
 </p>
  
 <p>
@@ -10,12 +10,12 @@
   <%= @article.text %>
 </p>
 
-<h2>Comments</h2>
+<h4>Comments</h4>
 <%= render @article.comments %>
 
 <!-- The comments section was added after creating the model and controller. -->
 <!-- Notice that Comments don't need their own view, they are going to be apart of the article view. -->
-<h2>Add a comment:</h2>
+<h4>Add a comment:</h4>
 <%= render 'comments/form' %>
 
 <%= link_to 'Edit', edit_article_path(@article) %> |
